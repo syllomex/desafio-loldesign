@@ -1,0 +1,162 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 100vh;
+  width: 100%;
+}
+
+.container > h1 {
+  font-size: 40px;
+  margin-bottom: 8px;
+  color: #3e3;
+}
+.container > p {
+  text-align: center;
+  font-size: 18px;
+}
+
+.form-container {
+  font-size: 28px;
+  margin-top: 20px;
+}
+
+.plans-container button {
+  cursor: pointer;
+  background-color: transparent;
+
+  border: 1px solid #ddd;
+  border-radius: 4px;
+
+  font-size: 22px;
+
+  padding: 8px;
+  margin-right: 8px;
+  margin-bottom: 32px;
+
+  transition-duration: 0.2s;
+}
+.plans-container button:hover {
+  background-color: #f7f7f7;
+}
+
+.plans-container > span {
+  display: block;
+
+  font-weight: 500;
+  text-transform: uppercase;
+
+  margin-bottom: 8px;
+}
+
+.plans-container .active {
+  background-color: #3e3;
+  border-color: #3e3;
+  color: #fff;
+}
+.plans-container .active:hover {
+  background-color: #7e7;
+}
+
+.selects {
+  margin-bottom: 8px;
+}
+
+.selects > span {
+  margin-right: 12px;
+
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.selects > span:not(:first-child) {
+  margin-left: 32px;
+}
+
+.selects > select {
+  cursor: pointer;
+
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 24px;
+
+  padding: 8px;
+}
+.selects > select:focus {
+  box-shadow: 0px 0px 5px 1px #7e7;
+}
+
+.minutes-container {
+  margin-top: 28px;
+}
+
+.minutes-container > span {
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  display: block;
+}
+.minutes-container > input {
+  font-size: 24px;
+  padding: 8px;
+
+  border: 1px solid #ddd;
+  border-radius: 4px;
+
+  width: 96px;
+}
+.minutes-container > input:focus {
+  box-shadow: 0px 0px 5px 1px #7e7;
+}
+
+.calc-table {
+  margin-top: 48px;
+  text-align: center;
+  width: 100vw;
+  max-width: 600px;
+  border: 1px solid #eee;
+  padding: 12px;
+}
+
+.calc-table th:not(:last-child),
+td:not(:last-child) {
+  border-right: 1px solid #eee;
+}
+
+@media (max-width: 700px) {
+  .container {
+    padding: 8px;
+  }
+
+  .form-container,
+  .plans-container,
+  .plans-container > div,
+  .selects {
+    display: flex;
+    flex-direction: column;
+  }
+  .plans-container button {
+    display: block;
+    margin-bottom: 12px;
+  }
+  .selects > span {
+    margin-left: 0px !important;
+  }
+  .selects > select {
+    margin-bottom: 12px;
+  }
+
+  .minutes-container > input {
+    width: 90vw;
+  }
+
+  .calc-table {
+    font-size: 18px;
+    width: 90vw;
+  }
+  .calc-table th, .calc-table td {
+    padding: 8px;
+  }
+}
